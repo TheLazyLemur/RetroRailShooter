@@ -1,16 +1,18 @@
 using System;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Player : MonoBehaviour
 {
-    public float _maxBoost = 100;
-    public float _remainingBoost;
-    
-    public static Action OnDeath;
+    [FormerlySerializedAs("_maxBoost")] public float maxBoost = 100;
+    [FormerlySerializedAs("_remainingBoost")] public float remainingBoost;
+    public static Action onDeath;
         
+    public float forwardSpeed = 6;
+    
     private void OnTriggerEnter(Collider other)
     {
-        OnDeath.Invoke();
+        onDeath.Invoke();
         var rb = gameObject.GetComponent<Rigidbody>();
         var col = gameObject.GetComponent<BoxCollider>();
         col.isTrigger = false;

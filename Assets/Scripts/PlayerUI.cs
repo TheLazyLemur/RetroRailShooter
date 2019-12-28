@@ -14,8 +14,8 @@ public class PlayerUI : MonoBehaviour
     {
         //Scriptable object architecture here
         var player = FindObjectOfType<Player>();
-        max = player._maxBoost;
-        current = player._remainingBoost;
+        max = player.maxBoost;
+        current = player.remainingBoost;
         var percent = current / max * 100;
         var res = percent / 100;
         _text.text = res.ToString();

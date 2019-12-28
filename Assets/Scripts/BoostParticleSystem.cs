@@ -22,8 +22,8 @@ public class BoostParticleSystem : MonoBehaviour
     {
         PlayerMovement.BarrelRoll += barrel.Play;
         
-        PlayerMovement.BoostEvent += Boost;
-        Player.OnDeath += () => Boost(false);
+        PlayerBoost.boostEvent += Boost;
+        Player.onDeath += () => Boost(false);
     }
 
     private void Boost(bool value)

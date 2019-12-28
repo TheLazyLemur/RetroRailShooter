@@ -10,11 +10,13 @@ This project aims to create a full vertical slice of gameplay of a Rails Shooter
   - [x] Boost
   - [x] Slow Down
   - [x] On Rails Movement
-- [] Boostbar
+- [ ] Boostbar
+  - [x] Code functionality
+  - [ ] Pretty UI
 - [ ] Powerups
 - [ ] Shooting
 - [ ] Enemies
-
+- [ ] Sounds effects forr all of the above.
 
 
 

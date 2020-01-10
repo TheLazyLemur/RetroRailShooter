@@ -35340,6 +35340,7 @@ GameObject:
   - component: {fileID: 959202330}
   - component: {fileID: 959202328}
   - component: {fileID: 959202327}
+  - component: {fileID: 959202332}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -35375,7 +35376,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a61c31c72ec22b1409e4ad1f73dd8a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameraVaraibles: {fileID: 0}
+  cameraManager: {fileID: 2119624933}
   aimTarget: {fileID: 211228551}
 --- !u!54 &959202327
 Rigidbody:
@@ -35418,7 +35419,70 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 779ec4fdc5da44fb8abfd468f3a1a598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  joystick: 1
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 959202332}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: boostEvent
+      Entry: 7
+      Data: 0|System.Action`1[[System.Boolean, mscorlib]], mscorlib
+    - Name: target
+      Entry: 10
+      Data: 0
+    - Name: declaringType
+      Entry: 7
+      Data: 1|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: PlayerBoost, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: methodName
+      Entry: 1
+      Data: Boost
+    - Name: delegateType
+      Entry: 7
+      Data: 2|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Action`1[[System.Boolean, mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: signature
+      Entry: 7
+      Data: 3|System.Type[], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|System.RuntimeType, mscorlib
+    - Name: 
+      Entry: 1
+      Data: System.Boolean, mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: breakEvent
+      Entry: 6
+      Data: 
   xySpeed: 18
   lookSpeed: 340
 --- !u!114 &959202330
@@ -35451,9 +35515,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 49a2550aaa4c4dc19fb1fe45b9078ab5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxBoost: 10
+  maxBoost: 20
   remainingBoost: 0
   forwardSpeed: 6
+--- !u!114 &959202332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959202324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3ba9da24e7b445a9776501e8074a095, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraManager: {fileID: 2119624933}
 --- !u!1 &967883866
 GameObject:
   m_ObjectHideFlags: 0
@@ -60904,8 +60981,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b58804d53b3e43cebb64a90b43fd4d78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraParent: {fileID: 0}
-  dolly: {fileID: 0}
+  cameraParent: {fileID: 504094690}
+  dolly: {fileID: 361593942}
 --- !u!1 &2121291049
 GameObject:
   m_ObjectHideFlags: 0
